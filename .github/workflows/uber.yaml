@@ -5,7 +5,6 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-
   uberjob:
     runs-on: ubuntu-latest
     name: Build & Test
@@ -16,8 +15,8 @@ jobs:
         with:
           node-version: 12.x
       - uses: pnpm/action-setup@v1.2.1
-            with:
-              version: 4.11.1
+        with:
+          version: 4.11.1
 
       # Yarn packages will be installed only if there is a cache miss
       - name: Install packages
