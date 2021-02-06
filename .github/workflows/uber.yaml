@@ -1,0 +1,30 @@
+name: Build and Test
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+
+  uberjob:
+    runs-on: ubuntu-latest
+    name: Build & Test
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js 12
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - uses: pnpm/action-setup@v1.2.1
+            with:
+              version: 4.11.1
+
+      # Yarn packages will be installed only if there is a cache miss
+      - name: Install packages
+        run: pnpm i
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
