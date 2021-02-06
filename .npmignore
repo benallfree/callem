@@ -2,3 +2,4 @@ src
 test
 *.yaml
 tsconfig.json
+.watchmanconfig
