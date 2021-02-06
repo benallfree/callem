@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "target": "es3",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "src",
+    "moduleResolution": "Node",
+    "declaration": true
+  }
+}
