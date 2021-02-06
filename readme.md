@@ -12,7 +12,7 @@ npm i callem
 
 Create an event
 
-```
+```typescript
 include {callem} from 'callem'
 const [onMyEvent, emitMyEvent] = callem<{id:number}>()
 
