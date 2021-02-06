@@ -1,7 +1,6 @@
 dependencies:
   '@types/jest': 26.0.20
   nanoevents: 5.1.10
-  smart-buffer: 4.1.0
 devDependencies:
   '@babel/preset-typescript': 7.12.13
   concurrently: 5.3.0
@@ -3494,13 +3493,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
-  /smart-buffer/4.1.0:
-    dev: false
-    engines:
-      node: '>= 6.0.0'
-      npm: '>= 3.0.0'
-    resolution:
-      integrity: sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
   /snapdragon-node/2.1.1:
     dependencies:
       define-property: 1.0.0
@@ -4184,5 +4176,4 @@ specifiers:
   prettier: ^2.2.1
   prettier-plugin-organize-imports: ^1.1.1
   rimraf: ^3.0.2
-  smart-buffer: ^4.1.0
   typescript: ^4.1.3
