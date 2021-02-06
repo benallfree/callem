@@ -3,6 +3,21 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "license": "MIT",
+  "author": {
+    "name": "Ben Allfree",
+    "url": "http://github.com/benallfree"
+  },
+  "description": "Typescript-first observer-based event library",
+  "keywords": [
+    "event",
+    "observer",
+    "callback",
+    "unsubscribe",
+    "typescript"
+  ],
+  "repository": {
+    "url": "https://github.com/benallfree/callem"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build": "tsc",
