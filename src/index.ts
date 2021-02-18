@@ -1,4 +1,4 @@
-import { EventEmitter } from 'events'
+import { Emitter } from 'nanoevents'
 
 export type DataPrimitives = any
 export type CallemData = { [_: string]: DataPrimitives }
@@ -27,11 +27,11 @@ unsub() // Unsubscribe, stop listening
 
 */
 export function callem<TData extends CallemData>(): CallemPair<TData> {
-  const emitter = new EventEmitter()
+  const emitter = new Emitter()
   return [
     (callback: CallemHandler<TData>): Unsubscribe => {
-      emitter.on('callem', callback)
-      return () => emitter.removeListener('callem', callback)
+      const unsub = emitter.on('callem', callback)
+      return unsub
     },
     (data: TData) => {
       emitter.emit('callem', data)
